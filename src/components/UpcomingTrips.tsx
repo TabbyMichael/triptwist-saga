@@ -14,23 +14,33 @@ import { useState } from "react";
 // Generate 200 sample trips
 const generateSampleTrips = () => {
   const cities = [
-    ["Paris", "France"],
-    ["Tokyo", "Japan"],
-    ["Santorini", "Greece"],
-    ["New York", "USA"],
-    ["Rome", "Italy"],
-    ["Barcelona", "Spain"],
-    ["London", "UK"],
-    ["Dubai", "UAE"],
-    ["Sydney", "Australia"],
-    ["Amsterdam", "Netherlands"],
+    ["Paris", "France", "eiffel-tower"],
+    ["Tokyo", "Japan", "mount-fuji"],
+    ["Santorini", "Greece", "santorini-sunset"],
+    ["New York", "USA", "times-square"],
+    ["Rome", "Italy", "colosseum"],
+    ["Barcelona", "Spain", "sagrada-familia"],
+    ["London", "UK", "big-ben"],
+    ["Dubai", "UAE", "burj-khalifa"],
+    ["Sydney", "Australia", "opera-house"],
+    ["Amsterdam", "Netherlands", "canals"],
+    ["Bali", "Indonesia", "rice-terraces"],
+    ["Cairo", "Egypt", "pyramids"],
+    ["Rio de Janeiro", "Brazil", "christ-redeemer"],
+    ["Venice", "Italy", "grand-canal"],
+    ["Kyoto", "Japan", "temples"],
+    ["Machu Picchu", "Peru", "ruins"],
+    ["Singapore", "Singapore", "marina-bay"],
+    ["Istanbul", "Turkey", "hagia-sophia"],
+    ["Prague", "Czech Republic", "old-town"],
+    ["Cape Town", "South Africa", "table-mountain"]
   ];
 
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   
   return Array.from({ length: 200 }, (_, index) => {
     const cityIndex = index % cities.length;
-    const [city, country] = cities[cityIndex];
+    const [city, country, landmark] = cities[cityIndex];
     const monthIndex = index % 12;
     const startDay = (index % 28) + 1;
     
@@ -40,7 +50,7 @@ const generateSampleTrips = () => {
       destination: `${city}, ${country}`,
       startDate: `${months[monthIndex]} ${startDay}, 2024`,
       endDate: `${months[monthIndex]} ${startDay + 7}, 2024`,
-      image: `https://source.unsplash.com/featured/800x600/?${city.toLowerCase()},travel&sig=${index}`,
+      image: `https://source.unsplash.com/featured/800x600/?${city.toLowerCase()},${landmark}&sig=${index}`,
     };
   });
 };
