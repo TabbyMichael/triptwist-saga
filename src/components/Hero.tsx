@@ -12,24 +12,24 @@ import { useRef } from "react";
 
 const HERO_IMAGES = [
   {
-    url: "https://source.unsplash.com/featured/1920x1080/?travel,beach",
-    alt: "Beautiful beach destination",
+    url: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1920&h=1080",
+    alt: "Scenic mountain landscape with deer",
   },
   {
-    url: "https://source.unsplash.com/featured/1920x1080/?travel,mountains",
-    alt: "Mountain landscape",
+    url: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=1920&h=1080",
+    alt: "Beautiful river between mountains",
   },
   {
-    url: "https://source.unsplash.com/featured/1920x1080/?travel,city",
-    alt: "City skyline",
+    url: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1920&h=1080",
+    alt: "Majestic pine forest",
   },
   {
-    url: "https://source.unsplash.com/featured/1920x1080/?travel,nature",
-    alt: "Natural landscape",
+    url: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&h=1080",
+    alt: "Foggy mountain peaks",
   },
   {
-    url: "https://source.unsplash.com/featured/1920x1080/?travel,adventure",
-    alt: "Adventure travel",
+    url: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1920&h=1080",
+    alt: "Ocean waves at sunset",
   },
 ];
 

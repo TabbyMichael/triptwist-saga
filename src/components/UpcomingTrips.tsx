@@ -14,35 +14,34 @@ import { useState } from "react";
 // Generate 200 sample trips
 const generateSampleTrips = () => {
   const cities = [
-    ["Paris", "France", "eiffel-tower"],
-    ["Tokyo", "Japan", "mount-fuji"],
-    ["Santorini", "Greece", "santorini-sunset"],
-    ["New York", "USA", "times-square"],
-    ["Rome", "Italy", "colosseum"],
-    ["Barcelona", "Spain", "sagrada-familia"],
-    ["London", "UK", "big-ben"],
-    ["Dubai", "UAE", "burj-khalifa"],
-    ["Sydney", "Australia", "opera-house"],
-    ["Amsterdam", "Netherlands", "canals"],
-    ["Bali", "Indonesia", "rice-terraces"],
-    ["Cairo", "Egypt", "pyramids"],
-    ["Rio de Janeiro", "Brazil", "christ-redeemer"],
-    ["Venice", "Italy", "grand-canal"],
-    ["Kyoto", "Japan", "temples"],
-    ["Machu Picchu", "Peru", "ruins"],
-    ["Singapore", "Singapore", "marina-bay"],
-    ["Istanbul", "Turkey", "hagia-sophia"],
-    ["Prague", "Czech Republic", "old-town"],
-    ["Cape Town", "South Africa", "table-mountain"]
+    ["Paris", "France", "1499813-paris-eiffel-tower"],
+    ["Tokyo", "Japan", "1492571-mount-fuji"],
+    ["Santorini", "Greece", "1507686-santorini-sunset"],
+    ["New York", "USA", "1496614-times-square"],
+    ["Rome", "Italy", "1491897-colosseum"],
+    ["Barcelona", "Spain", "1499629-sagrada-familia"],
+    ["London", "UK", "1500380-big-ben"],
+    ["Dubai", "UAE", "1494427-burj-khalifa"],
+    ["Sydney", "Australia", "1493375-opera-house"],
+    ["Amsterdam", "Netherlands", "1496563-canals"],
+    ["Bali", "Indonesia", "1502161-rice-terraces"],
+    ["Cairo", "Egypt", "1503915-pyramids"],
+    ["Rio de Janeiro", "Brazil", "1483729-christ-redeemer"],
+    ["Venice", "Italy", "1514563-grand-canal"],
+    ["Kyoto", "Japan", "1493976-temples"],
+    ["Machu Picchu", "Peru", "1461974-ruins"],
+    ["Singapore", "Singapore", "1492158-marina-bay"],
+    ["Istanbul", "Turkey", "1519923-hagia-sophia"],
+    ["Prague", "Czech Republic", "1513922-old-town"],
+    ["Cape Town", "South Africa", "1486259-table-mountain"]
   ];
 
-  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  
   return Array.from({ length: 200 }, (_, index) => {
     const cityIndex = index % cities.length;
-    const [city, country, landmark] = cities[cityIndex];
+    const [city, country, photoId] = cities[cityIndex];
     const monthIndex = index % 12;
     const startDay = (index % 28) + 1;
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     
     return {
       id: index + 1,
@@ -50,7 +49,7 @@ const generateSampleTrips = () => {
       destination: `${city}, ${country}`,
       startDate: `${months[monthIndex]} ${startDay}, 2024`,
       endDate: `${months[monthIndex]} ${startDay + 7}, 2024`,
-      image: `https://source.unsplash.com/featured/800x600/?${city.toLowerCase()},${landmark}&sig=${index}`,
+      image: `https://images.unsplash.com/photo-${photoId}?auto=format&fit=crop&w=800&h=600`,
     };
   });
 };
