@@ -14,25 +14,25 @@ import { useState } from "react";
 // Generate 200 sample trips
 const generateSampleTrips = () => {
   const cities = [
-    ["Paris", "France", "1499813-paris-eiffel-tower"],
-    ["Tokyo", "Japan", "1492571-mount-fuji"],
-    ["Santorini", "Greece", "1507686-santorini-sunset"],
-    ["New York", "USA", "1496614-times-square"],
-    ["Rome", "Italy", "1491897-colosseum"],
-    ["Barcelona", "Spain", "1499629-sagrada-familia"],
-    ["London", "UK", "1500380-big-ben"],
-    ["Dubai", "UAE", "1494427-burj-khalifa"],
-    ["Sydney", "Australia", "1493375-opera-house"],
-    ["Amsterdam", "Netherlands", "1496563-canals"],
-    ["Bali", "Indonesia", "1502161-rice-terraces"],
-    ["Cairo", "Egypt", "1503915-pyramids"],
-    ["Rio de Janeiro", "Brazil", "1483729-christ-redeemer"],
-    ["Venice", "Italy", "1514563-grand-canal"],
-    ["Kyoto", "Japan", "1493976-temples"],
-    ["Machu Picchu", "Peru", "1461974-ruins"],
-    ["Singapore", "Singapore", "1492158-marina-bay"],
-    ["Istanbul", "Turkey", "1519923-hagia-sophia"],
-    ["Prague", "Czech Republic", "1513922-old-town"],
+    ["Paris", "France", "1499813-paris-eiffel-tower-during-daytime"],
+    ["Tokyo", "Japan", "1480796-red-and-white-pagoda"],
+    ["Santorini", "Greece", "1507686-white-and-blue-santorini-houses"],
+    ["New York", "USA", "1496614-new-york-times-square-at-night"],
+    ["Rome", "Italy", "1491897-ancient-roman-colosseum"],
+    ["Barcelona", "Spain", "1499629-sagrada-familia-cathedral"],
+    ["London", "UK", "1500380-big-ben-and-westminster"],
+    ["Dubai", "UAE", "1494427-burj-khalifa-at-sunset"],
+    ["Sydney", "Australia", "1493375-sydney-opera-house"],
+    ["Amsterdam", "Netherlands", "1496563-amsterdam-canal-houses"],
+    ["Bali", "Indonesia", "1502161-ubud-rice-terraces"],
+    ["Cairo", "Egypt", "1503915-great-pyramids-of-giza"],
+    ["Rio de Janeiro", "Brazil", "1483729-christ-the-redeemer"],
+    ["Venice", "Italy", "1514563-venice-grand-canal"],
+    ["Kyoto", "Japan", "1493976-traditional-japanese-temple"],
+    ["Machu Picchu", "Peru", "1461974-ancient-inca-ruins"],
+    ["Singapore", "Singapore", "1492158-marina-bay-sands"],
+    ["Istanbul", "Turkey", "1519923-blue-mosque"],
+    ["Prague", "Czech Republic", "1513922-prague-old-town"],
     ["Cape Town", "South Africa", "1486259-table-mountain"]
   ];
 
@@ -49,7 +49,7 @@ const generateSampleTrips = () => {
       destination: `${city}, ${country}`,
       startDate: `${months[monthIndex]} ${startDay}, 2024`,
       endDate: `${months[monthIndex]} ${startDay + 7}, 2024`,
-      image: `https://images.unsplash.com/photo-${photoId}?auto=format&fit=crop&w=800&h=600`,
+      image: `https://source.unsplash.com/featured/?${city.toLowerCase()},landmark`,
     };
   });
 };
